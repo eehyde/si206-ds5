@@ -3,7 +3,7 @@ import unittest
 
 # TODO: read dataset.txt under data folder
 # hint: what is a file path?
-f = open("", "r")
+f = open("data/dataset.txt", "r")
 
 data = f.read()
 
@@ -11,7 +11,7 @@ data = f.read()
 # store all urls (start with http:// or https://) in all_url variable
 # The outcome should be similar to this:
 # ["http://abc.com", "http://edf.com"]
-regex = r""
+regex = r"(http|https)://[A-Z a-z 0-9]+\\.com"
 all_url = re.findall(regex, data, re.MULTILINE)
 
 # TODO:
